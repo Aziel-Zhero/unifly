@@ -11,7 +11,9 @@ async function loadComponent(path) {
 async function start() {
   const html = await loadComponent('components/home.html');
   app.innerHTML = html;
-  initHome(); // Esse ativa os botões da home após o DOM estar inserido
+
+  // Importante: só inicializar os eventos DEPOIS do HTML estar no DOM
+  await initHome();
 }
 
 start();

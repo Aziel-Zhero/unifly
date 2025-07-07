@@ -4,7 +4,6 @@ export function animateConfirmCard() {
   const btn = document.getElementById('voltarHomeCard');
   const title = document.querySelector('#confirmCard > h2');
 
-  // Timeline GSAP para animação
   const tl = gsap.timeline();
 
   tl.from(title, { duration: 0.6, y: 40, opacity: 0, ease: "power3.out" })
