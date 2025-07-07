@@ -26,3 +26,20 @@ async function init() {
 }
 
 init();
+
+// js/main.js
+import init from './routes/home.js';
+
+const app = document.getElementById('app');
+
+async function loadComponent(path) {
+  const response = await fetch(path);
+  return response.text();
+}
+
+async function start() {
+  app.innerHTML = await loadComponent('/components/home.html');
+  init(); // Ativa botões
+}
+
+start();
