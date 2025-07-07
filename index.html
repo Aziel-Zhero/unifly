@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unifly | Confirmação de Eventos - Unimed</title>
+    <title>Unifly | Eventos Unimed</title>
 
-    <!-- TailwindCSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet" />
-    
-    <!-- Estilo customizado -->
-    <link rel="stylesheet" href="styles/custom.css" />
-
-    <!-- QRCode Generator -->
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              unimedGreen: '#007F3E',
+              unimedLight: '#00B140',
+            },
+          },
+        },
+      };
+    </script>
   </head>
 
-  <body class="bg-white text-gray-800 overflow-hidden font-sans">
-
-    <!-- Container das telas -->
+  <body class="overflow-hidden">
     <main id="app"></main>
 
-    <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
-    <!-- Script principal -->
-    <script type="module" src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
