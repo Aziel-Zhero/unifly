@@ -1,14 +1,9 @@
 // js/qrcode-handler.js
-export function gerarQRCode(conteudo) {
-  const div = document.getElementById('qrcode');
-  div.innerHTML = "";
+import QRCode from 'https://cdn.skypack.dev/qrcode';
 
-  new QRCode(div, {
-    text: conteudo,
-    width: 128,
-    height: 128,
-    colorDark: "#000000",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.H
+export function gerarQRCode(dado) {
+  const canvas = document.getElementById('qrcode');
+  QRCode.toCanvas(canvas, dado, { width: 250 }, function (error) {
+    if (error) console.error(error);
   });
 }

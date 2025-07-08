@@ -1,40 +1,11 @@
-<section id="confirmCard" class="h-screen w-full flex flex-col items-center justify-center bg-white text-center px-6 sm:px-10 md:px-16 lg:px-20">
-  <h2 class="text-2xl font-bold text-unimedGreen mb-6">Cartão de Confirmação</h2>
-
-  <div
-    id="cardContainer"
-    class="bg-gray-100 rounded-3xl shadow-xl p-8 sm:p-12 md:p-16 w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-3xl
-           flex flex-col items-center"
-    style="min-height: 520px;"
-  >
-    <img
-      src="https://via.placeholder.com/600x300?text=Evento+Unimed"
-      alt="Imagem do Evento"
-      class="w-full h-44 sm:h-56 md:h-64 object-cover rounded-2xl mb-8"
-    />
-
-    <div class="w-full max-w-md space-y-4">
-      <h3
-        id="nomeConfirmado"
-        class="text-2xl sm:text-3xl font-extrabold text-unimedGreen break-words"
-      >
-        [Nome]
-      </h3>
-      <p id="rgConfirmado" class="text-lg sm:text-xl text-gray-700">RG: [RG]</p>
-      <p id="dataConfirmado" class="text-lg sm:text-xl text-gray-700">Nascimento: [Data]</p>
-    </div>
-
-    <div
-      id="qrcode"
-      class="mt-10 flex justify-center"
-      style="width: 160px; height: 160px;"
-    ></div>
+<section id="confirmCard" class="h-screen w-full flex flex-col items-center justify-center bg-white text-[#1E1E1E] px-6">
+  <h2 class="text-2xl font-bold mb-4">Credencial Confirmada</h2>
+  <div id="cardContainer" class="bg-[#F0F0F0] rounded-2xl shadow-lg p-6 w-full max-w-sm text-center space-y-2">
+    <img src="https://via.placeholder.com/300x150?text=Evento" alt="Evento" class="rounded-lg w-full" />
+    <h3 id="nomeConfirmado" class="text-xl font-bold">Nome</h3>
+    <p id="rgConfirmado" class="text-gray-700">RG: 000000</p>
+    <p id="dataConfirmado" class="text-gray-700">Nascimento: 00/00/0000</p>
+    <div id="qrcode" class="w-32 h-32 mx-auto"></div>
   </div>
-
-  <button
-    id="voltarHomeCard"
-    class="mt-10 bg-unimedGreen text-white px-8 py-3 rounded-xl hover:bg-unimedLight transition font-semibold"
-  >
-    Voltar ao início
-  </button>
+  <button id="voltarPainelCard" class="mt-6 bg-[#007F3E] text-white px-6 py-3 rounded-xl hover:bg-[#00B140] transition">Voltar ao Painel</button>
 </section>
